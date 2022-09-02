@@ -1,9 +1,10 @@
 from django.shortcuts import render, HttpResponse
 from django.http import HttpResponse
 from AppCoder.models import Gerencia, Gerente, Colaborador
-from EntregaIntermediaNaretto.AppCoder.forms import GerenciaFormulario, GerenteFormulario, ColaboradorFormulario
+from .forms import GerenciaFormulario, GerenteFormulario, ColaboradorFormulario
 
 # Create your views here.
+
 
 def gerencia(request):
 
@@ -99,3 +100,7 @@ def buscar(request):
             respuesta = "No enviaste los datos necesarios"
 
       return render(request,"AppCoder/inicio.html",{"respuesta":respuesta})
+
+def inicio(request):
+      bienvenido = "Bienvenido"
+      return render(request, "AppCoder/inicio.html", {"Bienvenido":bienvenido})
