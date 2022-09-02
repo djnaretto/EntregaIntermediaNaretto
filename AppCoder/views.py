@@ -6,13 +6,13 @@ from .forms import GerenciaFormulario, GerenteFormulario, ColaboradorFormulario
 # Create your views here.
 
 
-def gerencia(request):
+#def gerencia(request):
 
-      gerencia =  Gerencia(nombre="Gerencia General", n_integrantes="3")
-      gerencia.save()
-      documentoDeTexto = f"--->Gerencia: {gerencia.nombre}   Numero de Integrantes: {gerencia.n_integrantes}"
+      #gerencia =  Gerencia(nombre="Gerencia General", n_integrantes="3")
+      #gerencia.save()
+      #documentoDeTexto = f"--->Gerencia: {gerencia.nombre}   Numero de Integrantes: {gerencia.n_integrantes}"
 
-      return HttpResponse(documentoDeTexto)
+      #return HttpResponse(documentoDeTexto)
 
 def gerencias(request):
 
@@ -26,7 +26,7 @@ def gerencias(request):
 
                   informacion = miFormulario.cleaned_data
 
-                  gerencia = Gerencia (nombre=informacion['gerencia'],  n_integrantes=informacion['n_integrantes']) 
+                  gerencia = Gerencia (nombre=informacion['nombre'], n_integrantes=informacion['n_integrantes']) 
 
                   gerencia.save()
 

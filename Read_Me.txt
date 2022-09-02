@@ -1,11 +1,9 @@
-Estimados,
+Bienvenido a tu pagina de RRHH,
 
-Se realiza entrega, pero al momento de ejecutar makemigrates me se;ala el siguiente error que no he podido resolver:
+En la pagina de inicio puedes buscar a un colaborador por su apellido que se encuentre dentro de la base de datos.
 
-ModuleNotFoundError: No module named 'EntregaIntermediaNaretto.AppCoder'
+En el boton 'Gerencias' puedes agregar una nueva gerencia y la cantidad de integrantes de la misma a la base de datos.
 
-Se busco e intento varias opciones segun lo que se indicaba en StackOverflow, pero no se resolvio
+En el boton 'Gerentes' puedes agregar un nuevo gerente, indicando su nombre, apellido, e-mail, y gerencia a cargo, a la base de datos.
 
-Desde ya muchas gracias por su ayuda y apoyo, quedo atento a sus comentarios con el fin de poder corregir el presente error.
-
-Muchas gracias, saludos cordiales.
+En el boton 'Colaboradores' puedes agregar un nuevo colaborador, indicando su nombre, apellido, e-mail, y cargo, a la base de datos.
