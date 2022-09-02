@@ -1,0 +1,53 @@
+{% extends "AppCoder/padre.html" %}
+
+{% load static %}
+
+{% block contenidoQueCambia %}
+
+        <div class="text-center">
+            <img height="40px" src="{{url}}" >
+            <h3>Bienvenido</h3>
+        </div>
+
+    <h1>{{mensaje}}</h1>
+  
+
+    <h3>Puedes buscar un colaborador:</h3>
+
+    <form action="/AppCoder/buscar/" method="GET">
+
+        <input type="cadena" name="apellido" id="apellido">
+
+        <input type="submit" value="Buscar">
+
+
+
+
+    </form>
+
+    
+
+    {% if colaboradores %}
+
+    <p>Estamos buscando el: {{apellido}}</p>
+
+    <ul>
+	{% for colaborador in colaboradores %}
+		<li> {{colaborador.nombre}} </li>
+		<li> {{colaborador.apellido}} </li>
+        <li> {{colaborador.email}} </li>
+        <li> {{colaborador.cargo}} </li>
+	{% endfor %}
+
+    </ul>
+
+    {% else %}
+    <p>No hay datos con esa descripción.</p>
+
+    {% endif %}
+
+    <p style="color: red;">{{respuesta}}</p>
+ 
+   
+
+{% endblock %}
